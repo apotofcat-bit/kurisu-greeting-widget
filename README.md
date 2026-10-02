@@ -5,6 +5,9 @@
 
 面向 Pixel 5 / Android 14（`minSdk 26`、`targetSdk 34`，其它 Android 设备同样可用）。
 
+**[⬇ 下载 APK](https://github.com/apotofcat-bit/kurisu-greeting-widget/releases/latest)** ·
+debug 签名，装上即用，详见 [Releases](https://github.com/apotofcat-bit/kurisu-greeting-widget/releases)。
+
 ---
 
 ## 1. 这个仓库是两部分工作
