@@ -1,0 +1,17 @@
+# 统一换行符，避免 Windows/Linux 协作时整文件 diff
+* text=auto eol=lf
+
+# PowerShell 脚本必须带 BOM，否则 Windows PowerShell 5.1 会按 GBK 读中文而撑破语法；
+# 这里声明为 binary，防止 Git 在检出时把 BOM 或 CRLF 处理掉。
+*.ps1 binary
+
+# 二进制
+*.jar binary
+*.apk binary
+*.ktx2 binary
+*.png binary
+*.jpg binary
+*.webp binary
+
+# 生成物不参与 diff
+app/src/main/res/values/strings.xml linguist-generated=true
