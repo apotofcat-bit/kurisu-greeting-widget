@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  小组件的"说明书"：尺寸、预览图、刷新周期。
+  注意 targetCellWidth / targetCellHeight / previewLayout / description 都是 API 31+ 的属性，
+  在更低的系统上会被忽略（compileSdk 34 下能正常编译，只是 Lint 会提示 UnusedAttribute）。
+-->
+<appwidget-provider xmlns:android="http://schemas.android.com/apk/res/android"
+    android:description="@string/widget_description"
+    android:minWidth="110dp"
+    android:minHeight="40dp"
+    android:targetCellWidth="2"
+    android:targetCellHeight="1"
+    android:resizeMode="horizontal|vertical"
+    android:widgetCategory="home_screen"
+    android:updatePeriodMillis="0"
+    android:initialLayout="@layout/widget_greeting"
+    android:previewLayout="@layout/widget_greeting" />

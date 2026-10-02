@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- 拉 Open-Meteo 的天气数据 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- 定位：天气需要知道大致位置。只要粗略定位，几公里的精度对天气完全够用，
+         而且不需要精确定位那种"始终允许"的敏感性。 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.GreetingWidget">
+
+        <!-- 说明页 + 授权定位 + 测试按钮 -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- 小组件本体。系统（uid 1000）发的广播可以送达非导出组件，所以 exported=false 是够的。
+             万一在小组件列表里找不到它，第一件事就是把这里改成 true 再试。 -->
+        <receiver
+            android:name=".GreetingWidgetProvider"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/greeting_widget_info" />
+        </receiver>
+    </application>
+
+</manifest>

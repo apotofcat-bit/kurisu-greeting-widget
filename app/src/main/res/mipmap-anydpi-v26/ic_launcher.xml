@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  纯 XML 的自适应图标，所以工程里一张 PNG 都不需要。
+  只在 anydpi-v26 下提供是够的：minSdk = 26，所有目标设备都走这条路。
+-->
+<adaptive-icon xmlns:android="http://schemas.android.com/apk/res/android">
+    <background android:drawable="@color/ic_launcher_background" />
+    <foreground android:drawable="@drawable/ic_launcher_foreground" />
+</adaptive-icon>

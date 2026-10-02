@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  气泡的小尾巴：一个朝右下的小三角。
+
+  画布是 72 x 20，三角形只占 x = 8..38：
+    (8,0) 左上 -> (38,0) 右上 -> (38,20) 右下尖角
+  "右下尖角"是关键：顶点落在右上顶点的正下方，斜边从左上往右下走，
+  所以整块看上去是往右下倾的。朝左的尾巴则把顶点放在左边。
+
+  配合 widget_bubble.xml 里的 gravity="bottom|end" 使用，
+  整块贴到气泡右下角；右边留的 34dp 空白是为了避开 26dp 的圆角。
+-->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="72dp"
+    android:height="20dp"
+    android:viewportWidth="72"
+    android:viewportHeight="20">
+    <path
+        android:fillColor="@color/widget_bubble"
+        android:pathData="M8,0 L38,0 L38,20 Z" />
+</vector>

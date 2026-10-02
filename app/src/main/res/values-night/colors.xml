@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 系统深色模式下的气泡配色：深底浅字。 -->
+<resources>
+    <color name="widget_bubble">#FF2B2B33</color>
+    <color name="widget_text">#FFF2F2F7</color>
+</resources>

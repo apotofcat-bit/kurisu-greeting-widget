@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Android 12+ 且系统处于深色模式。
+
+  目录名必须是 values-night-v31（night 在 v31 前面）——
+  Android 的资源限定符有固定的书写顺序，写反了不会被识别。
+
+  深色下容器色要用阶梯里偏深的那一头（_700），字用偏浅的（_100）。
+  注意方向：数字越大越深，和浅色模式刚好相反。
+-->
+<resources>
+    <color name="widget_bubble">@android:color/system_accent1_700</color>
+    <color name="widget_text">@android:color/system_accent1_100</color>
+</resources>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--
+      气泡的兜底颜色（Android 11 及以下，或者没有更具体限定符时用这套 = 浅色模式）。
+
+      同名资源会被更具体的选择覆盖：
+        values-night/       -> 系统深色模式
+        values-v31/         -> Android 12+ 跟随壁纸取色（Material You）
+        values-night-v31/   -> Android 12+ 且深色模式
+
+      Android 会按"限定符越具体越优先"的规则自动挑一个，不用写任何代码。
+    -->
+    <color name="widget_bubble">#FFF3F3F7</color>
+    <color name="widget_text">#FF1B1B1F</color>
+
+    <color name="ic_launcher_background">#FF2B2B33</color>
+</resources>

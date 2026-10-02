@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 用系统自带的 DeviceDefault 主题，省掉 AppCompat / Material 依赖。 -->
+    <style name="Theme.GreetingWidget" parent="android:Theme.DeviceDefault.Light" />
+</resources>

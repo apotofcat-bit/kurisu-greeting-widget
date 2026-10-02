@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Android 12+（API 31）：改用系统的 Material You 调色板，颜色由壁纸算出来。
+
+  system_accent1_* 是"主色"的明度阶梯，名字里的数字是 0~1000，
+  **数字越大越深**（从 framework 资源表里实测出来的）：
+      0 = #ffffffff 白      100 = #ffc1e8ff 浅     300 = #ff4bb6e8
+    500 = #ff007fac        700 = #ff004c69         900 = #ff001e2c 近黑
+   1000 = #ff000000 黑
+
+  Material 3 的浅色主题里，"容器色"是浅的、"容器上的字"是深的，
+  对应到这套阶梯就是 _100 配 _900。
+  （上一版我写成了 _900 配 _100，也就是容器直接用近黑色 —— 这就是"偏深"的原因。）
+-->
+<resources>
+    <color name="widget_bubble">@android:color/system_accent1_100</color>
+    <color name="widget_text">@android:color/system_accent1_900</color>
+</resources>

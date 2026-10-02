@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  小组件背景：一个"对话气泡"。
+
+  用 layer-list 叠两层：
+    1. 圆角矩形主体（底部 inset 14dp，给尾巴腾地方）
+    2. 右下角的小三角尾巴
+
+  两层用的是同一个颜色 @color/widget_bubble，所以接缝看不出来。
+  这个颜色会被不同限定符下的同名资源覆盖：
+    values-night/       -> 系统深色模式
+    values-v31/         -> Android 12+ 跟随壁纸取色
+    values-night-v31/   -> Android 12+ 且深色模式
+-->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- 主体 -->
+    <item android:bottom="14dp">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/widget_bubble" />
+            <corners android:radius="26dp" />
+        </shape>
+    </item>
+
+    <!--
+      尾巴：贴在右下角，整块 72dp x 20dp。
+      三角形画在 x = 8..38，配合 gravity="bottom|end"，
+      实际落在"距右边 34dp 到 60dp"这一段 —— 避开了 26dp 的圆角。
+      高度 20dp，主体底部留了 14dp，所以有 6dp 重叠，不会露白缝。
+    -->
+    <item
+        android:drawable="@drawable/widget_bubble_tail"
+        android:gravity="bottom|end"
+        android:width="72dp"
+        android:height="20dp" />
+
+</layer-list>
